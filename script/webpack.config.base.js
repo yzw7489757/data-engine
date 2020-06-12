@@ -1,19 +1,19 @@
-const path = require('path');
-const { name } = require('../package.json');
 
 module.exports = {
-  entry: path.resolve(__dirname + '../src/index.ts'),
   resolve: {
     extensions: ['.ts', '.js', '.tsx', '.jsx']
   },
 
-  output: {
-    library: name,
-    libraryTarget: 'umd',
-    filename: '[name].js',
-    path: path.resolve(__dirname, '../lib')
-  },
 
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    'react-router-dom': 'ReactRouterDOM',
+    'lodash': 'lodash',
+    antd: 'antd',
+    'moment': 'moment',
+    'moment/locale/zh-cn' : 'moment.locale',
+  },
   module: {
     rules: [
       {

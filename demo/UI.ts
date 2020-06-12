@@ -3,8 +3,8 @@ import { WindowsOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
 
 export default [
   {
-    name: '简单自动布局',
-    path: '/autolayout',
+    name: 'Reactive',
+    path: '/reactive',
     icon: WindowsOutlined,
     component: simple
   }
